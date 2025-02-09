@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .content-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            gap: 20px;
+        }
+        .photo-frame {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .photo {
+            width: 200px;
+            height: auto;
+            border: 10px solid white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background: white;
+            padding: 10px;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            position: relative;
+        }
+        .photo-left {
+            transform: rotate(-10deg);
+        }
+        .photo-right {
+            transform: rotate(10deg);
+        }
+        
+        @media (max-width: 768px) {
+            .content-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .photo {
+                width: 150px;
+            }
+            .photo-left, .photo-right {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Will you be my Valentine? 💖</h1>
+        <div class="buttons">
+            <button class="yes-button" onclick="handleYesClick()">Yes</button>
+            <button class="no-button" onclick="handleNoClick()">No</button>
+        </div>
+        <div class="content-container">
+            <div class="photo-frame">
+                <img src="riri.jpg" alt="Your Photo" class="photo photo-left">
+            </div>
+            <div class="gif_container">
+                <img src="https://media1.giphy.com/media/VM1fcpu2bKs1e2Kdbj/giphy.gif" alt="Cute GIF">
+            </div>
+            <div class="photo-frame">
+                <img src="riri 2.jpg" alt="Your Photo" class="photo photo-right">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
